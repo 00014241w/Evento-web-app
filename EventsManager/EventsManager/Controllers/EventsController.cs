@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EventsManager.Data;
 using EventsManager.Models;
+using EventsManager.Repositories;
 
 namespace EventsManager.Controllers
 {
@@ -15,39 +16,32 @@ namespace EventsManager.Controllers
     public class EventsController : ControllerBase
     {
         private readonly EventManagerDbContext _context;
+        private readonly IEventsRepository _eventsRepository;
 
-        public EventsController(EventManagerDbContext context)
-        {
-            _context = context;
+        public EventsController(IEventsRepository eventsRepository)
+        { 
+            _eventsRepository = eventsRepository;
         }
 
         // GET: api/Events
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Event>>> Getevents()
+        public async Task<IEnumerable<Event>> Getevents()
         {
-          if (_context.events == null)
-          {
-              return NotFound();
-          }
-            return await _context.events.ToListAsync();
+            return await _eventsRepository.GetAllEvents();
         }
 
         // GET: api/Events/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Event>> GetEvent(int id)
         {
-          if (_context.events == null)
-          {
-              return NotFound();
-          }
-            var @event = await _context.events.FindAsync(id);
+            var @event = await _eventsRepository.GetSingleEvent(id);
 
             if (@event == null)
             {
                 return NotFound();
             }
 
-            return @event;
+            return Ok(@event);
         }
 
         // PUT: api/Events/5
@@ -60,23 +54,7 @@ namespace EventsManager.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(@event).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!EventExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _eventsRepository.UpdateEvent(@event);
 
             return NoContent();
         }
@@ -86,12 +64,8 @@ namespace EventsManager.Controllers
         [HttpPost]
         public async Task<ActionResult<Event>> PostEvent(Event @event)
         {
-          if (_context.events == null)
-          {
-              return Problem("Entity set 'EventManagerDbContext.events'  is null.");
-          }
-            _context.events.Add(@event);
-            await _context.SaveChangesAsync();
+            _eventsRepository.CreateEvent(@event);
+
 
             return CreatedAtAction("GetEvent", new { id = @event.ID }, @event);
         }
@@ -100,25 +74,9 @@ namespace EventsManager.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEvent(int id)
         {
-            if (_context.events == null)
-            {
-                return NotFound();
-            }
-            var @event = await _context.events.FindAsync(id);
-            if (@event == null)
-            {
-                return NotFound();
-            }
-
-            _context.events.Remove(@event);
-            await _context.SaveChangesAsync();
+            _eventsRepository.DeleteEvent(id);
 
             return NoContent();
-        }
-
-        private bool EventExists(int id)
-        {
-            return (_context.events?.Any(e => e.ID == id)).GetValueOrDefault();
         }
     }
 }
