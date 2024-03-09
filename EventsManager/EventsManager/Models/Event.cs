@@ -1,4 +1,5 @@
-﻿namespace EventsManager.Models
+﻿using EventsManager.Data;
+namespace EventsManager.Models
 {
     public class Event
     {
@@ -9,4 +10,5 @@
         public DateTime Time { get; set; }
         public string Organizer { get; set; }
     }
+
 }

@@ -1,5 +1,6 @@
 using EventsManager.Data;
 using Microsoft.EntityFrameworkCore;
+using EventsManager.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
