@@ -247,3 +247,5 @@ C:\Users\user\OneDrive\Рабочий стол\Year 3\WAD\WAD.CW.00014241\Events
 C:\Users\user\OneDrive\Рабочий стол\Year 3\WAD\WAD.CW.00014241\EventsManager\EventsManager\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\user\OneDrive\Рабочий стол\Year 3\WAD\WAD.CW.00014241\EventsManager\EventsManager\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\OneDrive\Рабочий стол\Year 3\WAD\WAD.CW.00014241\EventsManager\EventsManager\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\user\OneDrive\Рабочий стол\Year 3\WAD\WAD.CW.00014241\EventsManager\EventsManager\bin\Debug\net6.0\EventsManager.DAL.dll
+C:\Users\user\OneDrive\Рабочий стол\Year 3\WAD\WAD.CW.00014241\EventsManager\EventsManager\bin\Debug\net6.0\EventsManager.DAL.pdb

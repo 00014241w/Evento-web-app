@@ -63,7 +63,7 @@ namespace EventsManager.Controllers
         [HttpPost]
         public async Task<ActionResult<Category>> PostCategory(Category category)
         {
-            _categoriesRepository.CreateCategory(category);
+            await _categoriesRepository.CreateCategory(category);
 
             return CreatedAtAction("GetCategory", new { id = category.CategoryId }, category);
         }
@@ -72,7 +72,7 @@ namespace EventsManager.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(int id)
         {
-            _categoriesRepository.DeleteCategory(id);
+            await _categoriesRepository.DeleteCategory(id);
             return NoContent();
         }
     }
