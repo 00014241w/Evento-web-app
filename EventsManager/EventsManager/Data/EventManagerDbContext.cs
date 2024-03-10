@@ -8,5 +8,6 @@ namespace EventsManager.Data
         public EventManagerDbContext(DbContextOptions<EventManagerDbContext> options) : base(options) { }
 
         public DbSet<Event> events { get; set; }
+        public DbSet<Category> categories { get; set; }
     }
 }

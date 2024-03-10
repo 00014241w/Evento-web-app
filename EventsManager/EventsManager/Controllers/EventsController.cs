@@ -25,7 +25,7 @@ namespace EventsManager.Controllers
 
         // GET: api/Events
         [HttpGet]
-        public async Task<IEnumerable<Event>> Getevents()
+        public async Task<IEnumerable<Event>> GetEvents()
         {
             return await _eventsRepository.GetAllEvents();
         }

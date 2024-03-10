@@ -14,12 +14,12 @@ namespace EventsManager.Repositories
         }
         public async Task<IEnumerable<Event>> GetAllEvents()
         {
-            return await _dbContext.events.ToListAsync();
+            return await _dbContext.events.Include(e => e.CategoryName).ToListAsync();
         }
 
         public async Task<Event> GetSingleEvent(int id)
         {
-            return await _dbContext.events.FirstOrDefaultAsync(e => e.ID == id);
+            return await _dbContext.events.Include(e => e.CategoryName).FirstOrDefaultAsync(e => e.ID == id);
         }
 
         public async Task CreateEvent(Event Event)
