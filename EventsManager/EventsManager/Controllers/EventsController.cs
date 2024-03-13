@@ -64,7 +64,7 @@ namespace EventsManager.Controllers
         [HttpPost]
         public async Task<ActionResult<Event>> PostEvent(Event @event)
         {
-            _eventsRepository.CreateEvent(@event);
+            await _eventsRepository.CreateEvent(@event);
 
 
             return CreatedAtAction("GetEvent", new { id = @event.ID }, @event);
@@ -74,7 +74,7 @@ namespace EventsManager.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEvent(int id)
         {
-            _eventsRepository.DeleteEvent(id);
+            await _eventsRepository.DeleteEvent(id);
 
             return NoContent();
         }
