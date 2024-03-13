@@ -1,0 +1,11 @@
+.header {
+  height: 10vh;
+  background-color: purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+}
+.logo {
+  color: white;
+}
