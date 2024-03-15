@@ -35,9 +35,6 @@ export class HomeComponent {
     'Actions',
   ];
 
-  onCreate() {
-    console.log('Oncreate Clicked');
-  }
   onEdit(id: number) {
     console.log('Edit: ', id);
   }
