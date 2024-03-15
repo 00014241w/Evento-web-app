@@ -1,6 +1,6 @@
-table {
-  width: 100%;
-  background-color: aliceblue;
+.table {
+  margin: 20px;
+  background-color: azure;
 }
 th,
 td {

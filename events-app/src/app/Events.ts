@@ -5,7 +5,6 @@ export interface Events {
   location: string;
   time: Date;
   organizer: string;
-  categoryId: number;
   categoryName: {
     categoryId: number;
     categoryName: string;
