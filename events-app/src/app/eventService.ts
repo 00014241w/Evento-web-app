@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Events } from './Events';
 import { Observable } from 'rxjs';
 
@@ -7,16 +7,26 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EventService {
-  httpClient = inject(HttpClient);
+  constructor(private httpClient: HttpClient) {}
 
-  constructor() {}
-
-  getAll() {
+  getAll(): Observable<Events[]> {
     return this.httpClient.get<Events[]>('https://localhost:7062/api/Events');
   }
+
   getByID(id: number): Observable<Events> {
     return this.httpClient.get<Events>(
       'https://localhost:7062/api/Events/' + id
     );
   }
+
+  create(item: Events): Observable<Events> {
+    return this.httpClient.post<Events>(
+      'https://localhost:7062/api/Events',
+      item
+    );
+  }
+
+  // getAllCategories(): Observable<any> {
+  //   return this.httpClient.get<any>('https://localhost:7062/api/Categories');
+  // }
 }
