@@ -40,6 +40,7 @@ export class HomeComponent {
   }
   onDetails(id: number) {
     console.log('onDetails: ', id);
+    this.router.navigateByUrl('/details/' + id);
   }
   onDelete(id: number) {
     console.log('onDelete: ', id);
