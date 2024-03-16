@@ -1,20 +1,38 @@
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: rgb(250, 239, 250);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  margin: 0;
-  padding: 0;
-}
 .form-card {
-  height: 80vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 80vh;
+}
+
+.form-item {
+  margin: 7px;
+}
+
+input,
+select {
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid plum;
   width: 40vw;
 }
-.form-item {
-  margin: 10px;
+
+label {
+  text-align: right;
+}
+
+#desc__input {
+  height: 100px;
+}
+
+.btn-div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Set the width of the button container to 100% */
+}
+
+.btn {
+  width: 120px; /* Adjust button width as needed */
 }

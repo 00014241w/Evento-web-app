@@ -1,28 +1,88 @@
 <div class="form-card">
-  <form action="" class="form">
-    <div class="form-item">
-      <label for="title" class="form__label">Title</label>
-      <input type="text" name="title" />
-    </div>
+  <div class="input-fields">
+    <form action="" class="form">
+      <div class="form-item">
+        <div class="col-25">
+          <label for="title" class="form__label">Title</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="title" [(ngModel)]="createEvent.title" />
+        </div>
+      </div>
 
-    <div class="form-item">
-      <label for="description" class="form__label">Description</label>
-      <input type="text" name="description" />
-    </div>
+      <div class="form-item">
+        <div class="col-25">
+          <label for="description" class="form__label">Description</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="text"
+            name="description"
+            [(ngModel)]="createEvent.description"
+            id="desc__input"
+          />
+        </div>
+      </div>
 
-    <div class="form-item">
-      <label for="location" class="form__label">Location</label>
-      <input type="text" name="location" />
-    </div>
+      <div class="form-item">
+        <div class="col-25">
+          <label for="location" class="form__label">Location</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="text"
+            name="location"
+            [(ngModel)]="createEvent.location"
+          />
+        </div>
+      </div>
 
-    <div class="form-item">
-      <label for="time" class="form_label">Time</label>
-      <input type="datetime-local" name="location" />
-    </div>
+      <div class="form-item">
+        <div class="col-25">
+          <label for="time" class="form__label">Time</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="datetime-local"
+            name="location"
+            [(ngModel)]="createEvent.time"
+          />
+        </div>
+      </div>
 
-    <div class="form-item">
-      <label for="organizer" class="form__label">Organizer</label>
-      <input type="text" name="organizer" />
-    </div>
-  </form>
+      <div class="form-item">
+        <div class="col-25">
+          <label for="organizer" class="form__label">Organizer</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="text"
+            name="organizer"
+            [(ngModel)]="createEvent.organizer"
+          />
+        </div>
+      </div>
+
+      <div class="form-item">
+        <div class="col-25">
+          <label for="category" class="form__label">Choose a category:</label>
+        </div>
+        <div class="col-75">
+          <select
+            name="categories"
+            id="category_select"
+            [(ngModel)]="categoryID"
+          >
+            @for(c of category; track c){
+            <option [value]="c.categoryId">{{ c.categoryName }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-div">
+        <button class="btn" (click)="create()">Save!</button>
+      </div>
+    </form>
+  </div>
 </div>

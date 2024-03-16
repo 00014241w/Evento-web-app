@@ -26,7 +26,7 @@ export class EventService {
     );
   }
 
-  // getAllCategories(): Observable<any> {
-  //   return this.httpClient.get<any>('https://localhost:7062/api/Categories');
-  // }
+  getAllCategories(): Observable<any> {
+    return this.httpClient.get<any>('https://localhost:7062/api/Categories');
+  }
 }
