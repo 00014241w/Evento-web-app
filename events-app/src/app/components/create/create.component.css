@@ -39,3 +39,8 @@ label {
 .btn {
   width: 120px; /* Adjust button width as needed */
 }
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-left: 5px;
+}

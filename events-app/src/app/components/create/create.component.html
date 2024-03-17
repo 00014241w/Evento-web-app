@@ -7,6 +7,7 @@
         </div>
         <div class="col-75">
           <input type="text" name="title" [(ngModel)]="createEvent.title" />
+          <span *ngIf="titleInvalid" class="error-text">Title is required</span>
         </div>
       </div>
 
@@ -20,6 +21,9 @@
             [(ngModel)]="createEvent.description"
             id="desc__input"
           ></textarea>
+          <span *ngIf="titleInvalid" class="error-text"
+            >Description is required</span
+          >
         </div>
       </div>
 
@@ -33,6 +37,9 @@
             name="location"
             [(ngModel)]="createEvent.location"
           />
+          <span *ngIf="titleInvalid" class="error-text"
+            >Location is required</span
+          >
         </div>
       </div>
 
@@ -46,6 +53,7 @@
             name="location"
             [(ngModel)]="createEvent.time"
           />
+          <span *ngIf="titleInvalid" class="error-text">Time is required</span>
         </div>
       </div>
 
@@ -59,6 +67,9 @@
             name="organizer"
             [(ngModel)]="createEvent.organizer"
           />
+          <span *ngIf="titleInvalid" class="error-text"
+            >Organizer is required</span
+          >
         </div>
       </div>
 
@@ -80,7 +91,9 @@
       </div>
 
       <div class="btn-div">
-        <button class="btn" (click)="create()">Save!</button>
+        <button class="btn" (click)="create()" [disabled]="isFormInvalid()">
+          Save!
+        </button>
       </div>
     </form>
   </div>
