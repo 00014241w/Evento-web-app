@@ -26,6 +26,10 @@ export class EventService {
     );
   }
 
+  update(item: Events) {
+    return this.httpClient.put('https://localhost:7062/api/Events', item);
+  }
+
   getAllCategories(): Observable<any> {
     return this.httpClient.get<any>('https://localhost:7062/api/Categories');
   }

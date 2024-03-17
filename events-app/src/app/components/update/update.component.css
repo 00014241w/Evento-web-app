@@ -1,0 +1,46 @@
+.form-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.form-item {
+  margin: 7px;
+}
+
+input,
+select,
+textarea {
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid plum;
+  width: 40vw;
+  vertical-align: top;
+  text-align: start;
+}
+
+label {
+  text-align: right;
+}
+
+#desc__input {
+  height: 150px;
+}
+
+.btn-div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Set the width of the button container to 100% */
+}
+
+.btn {
+  width: 120px; /* Adjust button width as needed */
+}
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-left: 5px;
+}

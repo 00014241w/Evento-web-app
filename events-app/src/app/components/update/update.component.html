@@ -1,0 +1,99 @@
+<div class="form-card">
+  <div class="input-fields">
+    <form action="" class="form">
+      <div class="form-item">
+        <div class="col-25">
+          <label for="title" class="form__label">Title</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="title" [(ngModel)]="updateEvent.title" />
+          <!-- <span *ngIf="titleInvalid" class="error-text">Title is required</span> -->
+        </div>
+      </div>
+
+      <div class="form-item">
+        <div class="col-25">
+          <label for="description" class="form__label">Description</label>
+        </div>
+        <div class="col-75">
+          <textarea
+            name="description"
+            [(ngModel)]="updateEvent.description"
+            id="desc__input"
+          ></textarea>
+          <!-- <span *ngIf="titleInvalid" class="error-text"
+            >Description is required</span
+          > -->
+        </div>
+      </div>
+
+      <div class="form-item">
+        <div class="col-25">
+          <label for="location" class="form__label">Location</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="text"
+            name="location"
+            [(ngModel)]="updateEvent.location"
+          />
+          <!-- <span *ngIf="titleInvalid" class="error-text"
+            >Location is required</span
+          > -->
+        </div>
+      </div>
+
+      <div class="form-item">
+        <div class="col-25">
+          <label for="time" class="form__label">Time</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="datetime-local"
+            name="time"
+            [(ngModel)]="updateEvent.time"
+          />
+          <!-- <span *ngIf="updateEvent" class="error-text">Time is required</span> -->
+        </div>
+      </div>
+
+      <div class="form-item">
+        <div class="col-25">
+          <label for="organizer" class="form__label">Organizer</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="text"
+            name="organizer"
+            [(ngModel)]="updateEvent.organizer"
+          />
+          <!-- <span *ngIf="titleInvalid" class="error-text"
+            >Organizer is required</span
+          > -->
+        </div>
+      </div>
+
+      <div class="form-item">
+        <div class="col-25">
+          <label for="category" class="form__label">Choose a category:</label>
+        </div>
+        <div class="col-75">
+          <select
+            name="categories"
+            id="category_select"
+            [(ngModel)]="categoryID"
+          >
+            @for(c of categoryObject; track c){
+            <option [value]="c.categoryId">{{ c.categoryName }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-div">
+        <button class="btn" (click)="toHome()">Cancel</button>
+        <button class="btn" (click)="edit()">Edit</button>
+      </div>
+    </form>
+  </div>
+</div>

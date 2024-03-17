@@ -37,6 +37,7 @@ export class HomeComponent {
 
   onEdit(id: number) {
     console.log('Edit: ', id);
+    this.router.navigateByUrl('/edit/' + id);
   }
   onDetails(id: number) {
     console.log('onDetails: ', id);
