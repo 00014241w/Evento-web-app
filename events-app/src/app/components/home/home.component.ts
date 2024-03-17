@@ -44,6 +44,9 @@ export class HomeComponent {
     this.router.navigateByUrl('/details/' + id);
   }
   onDelete(id: number) {
-    console.log('onDelete: ', id);
+    if (confirm('Are you sure you want to delete this event?')) {
+      // If the user confirms, navigate to the delete route
+      this.router.navigateByUrl('/delete/' + id);
+    }
   }
 }

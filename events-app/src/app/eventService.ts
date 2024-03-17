@@ -30,6 +30,10 @@ export class EventService {
     return this.httpClient.put('https://localhost:7062/api/Events', item);
   }
 
+  delete(id: number): Observable<any> {
+    return this.httpClient.delete('https://localhost:7062/api/Events/' + id);
+  }
+
   getAllCategories(): Observable<any> {
     return this.httpClient.get<any>('https://localhost:7062/api/Categories');
   }

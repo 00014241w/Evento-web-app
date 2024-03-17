@@ -25,4 +25,8 @@ export const routes: Routes = [
     path: 'edit/:id',
     component: UpdateComponent,
   },
+  {
+    path: 'delete/:id',
+    component: HomeComponent,
+  },
 ];
