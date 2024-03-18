@@ -26,8 +26,11 @@ export class EventService {
     );
   }
 
-  update(item: Events) {
-    return this.httpClient.put('https://localhost:7062/api/Events', item);
+  update(id: number, item: Events): Observable<Events> {
+    return this.httpClient.put<Events>(
+      `https://localhost:7062/api/Events/${id}`,
+      item
+    );
   }
 
   delete(id: number): Observable<any> {

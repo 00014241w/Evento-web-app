@@ -55,15 +55,19 @@ export class UpdateComponent implements OnInit {
   }
 
   edit() {
+    console.log('Update Event Object:', this.updateEvent);
     this.updateEvent.categoryId = this.categoryID;
     this.updateEvent.categoryName =
       this.categoryObject[
         this.findIndexByID(this.categoryObject, this.categoryID)
       ];
-    this.eventService.update(this.updateEvent).subscribe((res) => {
-      alert('Changes have been updated!');
-      this.router.navigateByUrl('home');
-    });
+    console.log('Update Event Object:', this.updateEvent);
+    this.eventService
+      .update(this.updateEvent.id, this.updateEvent)
+      .subscribe((res) => {
+        alert('Changes have been updated!');
+        this.router.navigateByUrl('home');
+      });
   }
 
   findIndexByID(jsonArray: any[], indexToFind: number): number {
