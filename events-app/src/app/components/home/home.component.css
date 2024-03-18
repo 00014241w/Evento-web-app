@@ -1,11 +1,41 @@
-.table {
-  margin: 20px;
-  background-color: azure;
+.body-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust as needed */
 }
-th,
-td {
-  color: black;
+
+.single-card {
+  flex: 0 1 calc(33.33% - 50px); /* Adjust as needed */
+  margin-top: 16px; /* Adjust as needed */
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
 }
-th {
+
+.example-card {
+  width: 100%;
+}
+
+.description-container {
+  max-height: 4.5em; /* Approximately 3 lines of text */
+  overflow: hidden;
+}
+
+.mat-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mat-card-content {
+  flex: 1;
+}
+
+mat-card-title {
   font-weight: bold;
+}
+.time {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 12px;
 }

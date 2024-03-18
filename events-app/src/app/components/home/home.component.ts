@@ -4,49 +4,37 @@ import { EventService } from '../../eventService';
 import { Events } from '../../Events';
 import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import { routes } from '../../app.routes';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatTableModule, MatButtonModule],
+  imports: [MatTableModule, MatButtonModule, MatCardModule, CommonModule],
+  providers: [DatePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  router = inject(Router);
   items: Events[] = [];
-  eventService = inject(EventService);
+
+  constructor(
+    private router: Router,
+    private eventService: EventService,
+    private datePipe: DatePipe
+  ) {}
+
   ngOnInit() {
     this.eventService.getAll().subscribe((result) => {
       this.items = result;
     });
   }
 
-  displayedColumns: any[] = [
-    'Id',
-    'Title',
-    'Description',
-    'Location',
-    'Time',
-    'Organizer',
-    'CategoryName',
-    'Actions',
-  ];
-
-  onEdit(id: number) {
-    console.log('Edit: ', id);
-    this.router.navigateByUrl('/edit/' + id);
-  }
-  onDetails(id: number) {
-    console.log('onDetails: ', id);
-    this.router.navigateByUrl('/details/' + id);
-  }
-  onDelete(id: number) {
-    if (confirm('Are you sure you want to delete this event?')) {
-      // If the user confirms, navigate to the delete route
-      this.router.navigateByUrl('/delete/' + id);
-    }
+  navigateToDetails(id: number) {
+    this.router.navigateByUrl(`/details/${id}`);
   }
 }
