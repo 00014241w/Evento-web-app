@@ -39,3 +39,17 @@ mat-card-title {
   font-weight: bold;
   font-size: 12px;
 }
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.card-btn {
+  height: 1.5rem;
+  width: 3rem;
+  margin: 5px 5px 5px 0;
+  border-radius: 5px;
+  border: none;
+  font-family: "Poppins";
+}

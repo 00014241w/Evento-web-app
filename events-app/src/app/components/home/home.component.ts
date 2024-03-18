@@ -37,4 +37,28 @@ export class HomeComponent {
   navigateToDetails(id: number) {
     this.router.navigateByUrl(`/details/${id}`);
   }
+
+  EditClicked(id: number) {
+    console.log(id, 'From Edit');
+    this.router.navigateByUrl('/edit/' + id);
+  }
+  DeleteClicked(id: number) {
+    console.log(id, 'From Delete');
+
+    const confirmDelete = confirm(
+      'Are you sure you want to delete this event?'
+    );
+    if (confirmDelete) {
+      console.log(id, 'From Delete');
+      this.eventService.delete(id).subscribe(
+        () => {
+          console.log('Event deleted successfully');
+          this.items = this.items.filter((item) => item.id !== id);
+        },
+        (error) => {
+          console.error('Error deleting event:', error);
+        }
+      );
+    }
+  }
 }

@@ -17,5 +17,9 @@
         item.time | date : "MMM d, h:mm"
       }}</mat-card-content>
     </mat-card>
+    <div class="buttons">
+      <button class="card-btn" (click)="EditClicked(item.id)">Edit</button>
+      <button class="card-btn" (click)="DeleteClicked(item.id)">Delete</button>
+    </div>
   </div>
 </div>
