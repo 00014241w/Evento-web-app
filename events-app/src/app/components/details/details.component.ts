@@ -3,13 +3,14 @@ import { ActivatedRoute } from '@angular/router';
 import { EventService } from '../../eventService';
 import { Events } from '../../Events';
 import { MatCardModule } from '@angular/material/card';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-details',
   standalone: true,
   templateUrl: './details.component.html',
   styleUrl: './details.component.css',
-  imports: [MatCardModule],
+  imports: [MatCardModule, DatePipe],
 })
 export class DetailsComponent implements OnInit {
   eventId!: number;

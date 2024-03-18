@@ -1,12 +1,12 @@
 .body-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Adjust as needed */
+  /* justify-content: space-around;  */
 }
 
 .single-card {
   flex: 0 1 calc(33.33% - 50px); /* Adjust as needed */
-  margin-top: 16px; /* Adjust as needed */
+  margin: 8px; /* Adjust as needed */
   background-color: white;
   border-radius: 10px;
   cursor: pointer;

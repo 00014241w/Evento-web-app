@@ -10,7 +10,7 @@
 }
 
 .example-card {
-  max-width: 400px;
+  max-width: 600px;
   width: 100%;
 }
 
@@ -23,4 +23,15 @@ body {
   height: 90vh;
   margin: 0;
   padding: 0;
+}
+
+mat-card-title {
+  font-weight: bold;
+  font-size: larger;
+}
+
+mat-card-subtitle {
+  color: gray;
+  font-size: 14px;
+  text-align: end;
 }

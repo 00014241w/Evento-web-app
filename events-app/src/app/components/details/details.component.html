@@ -4,13 +4,19 @@
       <mat-card-header>
         <mat-card-title-group>
           <mat-card-title>{{ event.title }}</mat-card-title>
-          <mat-card-subtitle>{{ event.categoryName }}</mat-card-subtitle>
         </mat-card-title-group>
       </mat-card-header>
+      <br />
       <mat-card-content>{{ event.description }}</mat-card-content>
-      <mat-card-content>{{ event.location }}</mat-card-content>
-      <mat-card-content>{{ event.time }}</mat-card-content>
-      <mat-card-content>{{ event.organizer }}</mat-card-content>
+      <br />
+      <mat-card-content> 📍 {{ event.location }}</mat-card-content>
+      <mat-card-content
+        >🕓{{ event.time | date : "MMM d, h:mm" }}</mat-card-content
+      >
+      <mat-card-content>✨{{ event.organizer }}</mat-card-content>
+      <mat-card-subtitle>{{
+        event.categoryName?.categoryName
+      }}</mat-card-subtitle>
     </mat-card>
   </div>
 </div>
