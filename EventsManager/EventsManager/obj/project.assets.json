@@ -3816,7 +3816,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "EventsManager.DAL/1.0.0": {
+      "EventsManager00014241.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -3824,10 +3824,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.27"
         },
         "compile": {
-          "bin/placeholder/EventsManager.DAL.dll": {}
+          "bin/placeholder/EventsManager00014241.DAL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/EventsManager.DAL.dll": {}
+          "bin/placeholder/EventsManager00014241.DAL.dll": {}
         }
       }
     }
@@ -11116,15 +11116,15 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "EventsManager.DAL/1.0.0": {
+    "EventsManager00014241.DAL/1.0.0": {
       "type": "project",
-      "path": "../EventsManager.DAL/EventsManager.DAL.csproj",
-      "msbuildProject": "../EventsManager.DAL/EventsManager.DAL.csproj"
+      "path": "../EventsManager.DAL/EventsManager00014241.DAL.csproj",
+      "msbuildProject": "../EventsManager.DAL/EventsManager00014241.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "EventsManager.DAL >= 1.0.0",
+      "EventsManager00014241.DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.27",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.27",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.27",
@@ -11138,9 +11138,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager\\EventsManager.csproj",
-      "projectName": "EventsManager",
-      "projectPath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager\\EventsManager.csproj",
+      "projectUniqueName": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager\\EventsManager00014241.csproj",
+      "projectName": "EventsManager00014241",
+      "projectPath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager\\EventsManager00014241.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager\\obj\\",
       "projectStyle": "PackageReference",
@@ -11159,8 +11159,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager.DAL\\EventsManager.DAL.csproj": {
-              "projectPath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager.DAL\\EventsManager.DAL.csproj"
+            "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager.DAL\\EventsManager00014241.DAL.csproj": {
+              "projectPath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager.DAL\\EventsManager00014241.DAL.csproj"
             }
           }
         }
@@ -11169,6 +11169,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -11217,7 +11222,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

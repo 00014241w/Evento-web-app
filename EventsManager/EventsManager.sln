@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsManager", "EventsManager\EventsManager.csproj", "{0DC3888E-0F11-4678-ACBC-CEAE3B04F4B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsManager00014241", "EventsManager\EventsManager00014241.csproj", "{0DC3888E-0F11-4678-ACBC-CEAE3B04F4B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsManager.DAL", "EventsManager.DAL\EventsManager.DAL.csproj", "{25609EA8-9271-42A7-98A7-0D270EFABE22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsManager00014241.DAL", "EventsManager.DAL\EventsManager00014241.DAL.csproj", "{25609EA8-9271-42A7-98A7-0D270EFABE22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MmdSzcmbdBshkpC27ZfSFszOdQU8kjiGE70iGlB5ZZoOafE519JvZT64PIjqDfNXHLgiu1DKDMCLSXnZAMc77A==",
+  "dgSpecHash": "ExJvyeRMY2xOjh4a77AGweevQwBq3w+oTxHIhb9jyAtFJJeaBzsrVMgZhtFCPVuMjeId0KVEd6wRQYhVyzHOyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager.DAL\\EventsManager.DAL.csproj",
+  "projectFilePath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager.DAL\\EventsManager00014241.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -2018,9 +2018,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager.DAL\\EventsManager.DAL.csproj",
-      "projectName": "EventsManager.DAL",
-      "projectPath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager.DAL\\EventsManager.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager.DAL\\EventsManager00014241.DAL.csproj",
+      "projectName": "EventsManager00014241.DAL",
+      "projectPath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager.DAL\\EventsManager00014241.DAL.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager.DAL\\obj\\",
       "projectStyle": "PackageReference",
@@ -2045,6 +2045,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2082,7 +2087,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

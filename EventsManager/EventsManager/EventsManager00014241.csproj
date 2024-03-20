@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EventsManager.DAL\EventsManager.DAL.csproj" />
+    <ProjectReference Include="..\EventsManager.DAL\EventsManager00014241.DAL.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4jMJw6MBjKQxr7ORYK/cowVA+8j9pGRh+ZLX1eswlNxWEGSPP45DcBpJKSyQs+Rfc7tuZOlZbx9NT5daFMsEFA==",
+  "dgSpecHash": "03J7+DBJpuUoY76z2Bhyylpc/t1k+ZHt+QDDWC55uW50rw90uK2cDP0pyxDBOOY4mWj1k2p082BKYmI3uge7jw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager\\EventsManager.csproj",
+  "projectFilePath": "C:\\Users\\user\\OneDrive\\Рабочий стол\\Year 3\\WAD\\WAD.CW.00014241\\EventsManager\\EventsManager\\EventsManager00014241.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
